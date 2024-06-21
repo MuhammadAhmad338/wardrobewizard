@@ -1,38 +1,43 @@
 const mongoose = require('mongoose');
 
-const deliverySchema = new mongoose.Schema({
+const deliverySchema =  new mongoose.Schema({
     firstName: {
-        type: String,
-        required: false // Optional field
+      type: String,
+      required: false
     },
     lastName: {
-        type: String,
-        required: true // Required field
+      type: String,
+      required: true
     },
     address: {
-        type: String,
-        required: true // Required field
+      type: String,
+      required: true
     },
     apartment: {
-        type: String,
-        required: false // Optional field
+      type: String,
+      required: false
     },
     city: {
-        type: String,
-        required: true // Required field
+      type: String,
+      required: true
     },
     postalCode: {
-        type: String,
-        required: true // Required field
+      type: String,
+      required: true
     },
     phone: {
-        type: String,
-        required: true // Required field
+      type: String,
+      required: true
     },
-    country: {
+    paymentMethod: {
         type: String,
         required: true,
-        default: 'Pakistan'
+        default: 'COD'
+    },
+    country: {
+      type: String,
+      required: true,
+      default: 'Pakistan'
     }
 });
 
